@@ -12,18 +12,26 @@ black - #000000;
   --secondary: ;
   --light: ;
   --dark: ;
-  --font-family: ;
+  --font-family: 'Quicksand', sans-serif;
+
 }
 
 * {
-  box-sizing: border-box, 2px, red;
+  border: 10px, solid black;
 }
 
 body {
-
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: grey;
+  width: 100vw;
+  height: 100vh;
 }
 
-header {
+h1 {
 
 }
 
@@ -31,10 +39,64 @@ main {
 
 }
 
-h1 {
-
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section {
+  background: white;
+  height: 20vh;
+  width: 37vw;
+  -webkit-border-radius: 12px;
+   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ol {
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+li {
+
+}
+
+input {
+
+}
+
+label {
+
+}
+
+button {
+  height: 5vh;
+  width: 13vw;
+  -webkit-border-radius: 10px;
+  border: none;
+}
+
+footer {
+  background: white;
+  height: 30vh;
+  width: 60vw;
+  -webkit-border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  height: 50%;
+  width: 50%;
+}
+
+h2 {
 
 }
