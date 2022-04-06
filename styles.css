@@ -13,14 +13,16 @@ black - #000000;
   --light: ;
   --dark: ;
   --font-family: 'Quicksand', sans-serif;
-
 }
 
 * {
   border: 10px, solid black;
 }
-
 body {
+
+}
+
+.body {
   font-family: var(--font-family);
   display: flex;
   flex-direction: column;
@@ -45,7 +47,7 @@ header {
   justify-content: center;
 }
 
-section {
+.box-container {
   background: white;
   height: 20vh;
   width: 37vw;
