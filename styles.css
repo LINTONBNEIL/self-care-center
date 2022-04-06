@@ -6,3 +6,35 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+:root {
+  --primary: ;
+  --secondary: ;
+  --light: ;
+  --dark: ;
+  --font-family: ;
+}
+
+* {
+  box-sizing: border-box, 2px, red;
+}
+
+body {
+
+}
+
+header {
+
+}
+
+main {
+
+}
+
+h1 {
+
+}
+
+section {
+
+}
