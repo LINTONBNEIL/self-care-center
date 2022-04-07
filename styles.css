@@ -47,7 +47,7 @@ header {
   justify-content: center;
 }
 
-h2 {
+.title {
   color: white;
 }
 
@@ -100,7 +100,15 @@ footer {
   justify-content: center;
 }
 
+.text {
+
+}
+
 img {
   height: 50%;
   width: 50%;
+}
+
+.hidden {
+  display: none;
 }
