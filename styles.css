@@ -8,33 +8,33 @@ black - #000000;
 */
 
 :root {
-  --primary: ;
-  --secondary: ;
-  --light: ;
-  --dark: ;
+  --primary: #134d71;
+  --secondary: #78a7c6;
+  --third: #f7e4bf;
+  --light: #ffffff;
+  --dark: #000000;
+  --gradient: var(--primary), var(secondary), var(--third);
   --font-family: 'Quicksand', sans-serif;
 }
 
 * {
   border: 10px, solid black;
 }
+
 body {
-
-}
-
-.body {
   font-family: var(--font-family);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background: grey;
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(var(--primary), var(--secondary), var(--third));
 }
 
-h1 {
 
+h1 {
+  color: var(--light)
 }
 
 main {
@@ -45,6 +45,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+h2 {
+  color: white;
 }
 
 .box-container {
@@ -78,6 +82,8 @@ label {
 }
 
 button {
+  color: white;
+  background-color: var(--primary);
   height: 5vh;
   width: 13vw;
   -webkit-border-radius: 10px;
@@ -97,8 +103,4 @@ footer {
 img {
   height: 50%;
   width: 50%;
-}
-
-h2 {
-
 }
