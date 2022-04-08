@@ -24,7 +24,7 @@ var affirmations = [
 
 "I honor my body by trusting the signals that it sends me.",
 
-"I manifest perfect health by making smart choices.,"
+"I manifest perfect health by making smart choices.",
 
 ];
 
