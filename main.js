@@ -20,24 +20,39 @@ var messages = {
 
 
 //event listener
-rmButton.addEventListener('click', findRandomMessage)
-text.addEventListener('click', returnPage)
+rmButton.addEventListener("click", fixingStuff)
+text.addEventListener("click", function() {
+  returnPage();
+  reloadPage();
+})
 
 // functions
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-function findRandomMessage() {
-  var selected = document.querySelector('input[type="radio"]:checked')
+function findRandomMessage(selected) {
+  // var selected = document.querySelector('input[type="radio"]:checked')
   var randomIndex = getRandomIndex(messages[selected.value])
   text.innerHTML = messages[selected.value][randomIndex]
-  reveal();
+  revealMessage();
 };
 
+// need conditional in findRandomMessage
+//OR new function that is a conditional
+
+function fixingStuff() {
+  var selected = document.querySelector('input[type="radio"]:checked')
+  if (selected) {
+    findRandomMessage(selected)
+  } else {
+    alert("Please Select Affirmation Or Mantra!");
+  }
+}
 
 
-function reveal() {
+
+function revealMessage() {
   mantraImg.classList.add("hidden")
   text.classList.remove("hidden")
 };
@@ -45,4 +60,8 @@ function reveal() {
 function returnPage() {
   mantraImg.classList.remove("hidden")
   text.classList.add("hidden")
+}
+
+function reloadPage() {
+  window.location.reload()
 }
