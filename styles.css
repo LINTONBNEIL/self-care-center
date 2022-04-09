@@ -47,7 +47,7 @@ header {
   justify-content: center;
 }
 
-h2 {
+.title {
   color: white;
 }
 
@@ -62,32 +62,31 @@ h2 {
   align-items: center;
 }
 
-ol {
+form {
   width: inherit;
   display: flex;
   justify-content: space-around;
   list-style-type: none;
 }
 
-li {
+div {
 
 }
 
 input {
-
 }
 
 label {
-
+  font-style: italic;
 }
 
-button {
+.receive-message {
   color: white;
   background-color: var(--primary);
   height: 5vh;
   width: 13vw;
   -webkit-border-radius: 10px;
-  border: none;
+  /* border: none; */
 }
 
 footer {
@@ -100,7 +99,53 @@ footer {
   justify-content: center;
 }
 
+.text {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  height: 9vh;
+  font-size: 2.7vh;
+  font-family: var(--font-family);
+  background: none;
+}
+
+.text:before, .text:after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 5px;
+  top: 50%;
+  background: var(--secondary);
+}
+
+.text:before {
+  left: -2.5px;
+}
+
+.text:after {
+  right: 2.5px;
+  background: var(--secondary);
+  transition: width 0.8 cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.text:hover:before{
+  background: var(--secondary);
+ width: 100%;
+ transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.text:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+
 img {
   height: 50%;
   width: 50%;
+}
+
+.hidden {
+  display: none;
 }
