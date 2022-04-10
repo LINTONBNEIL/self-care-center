@@ -17,9 +17,6 @@ black - #000000;
   --font-family: 'Quicksand', sans-serif;
 }
 
-* {
-  border: 10px, solid black;
-}
 
 body {
   font-family: var(--font-family);
@@ -66,13 +63,6 @@ form {
   list-style-type: none;
 }
 
-div {
-
-}
-
-input {
-}
-
 label {
   font-style: italic;
 }
@@ -83,7 +73,6 @@ label {
   height: 5vh;
   width: 13vw;
   -webkit-border-radius: 10px;
-  /* border: none; */
 }
 
 footer {
@@ -105,7 +94,6 @@ footer {
   font-family: var(--font-family);
   background: none;
 }
-
 
 img {
   height: 50%;
@@ -142,4 +130,37 @@ img {
   .receive-message {
     width: 13vw;
   }
+}
+
+p {
+  animation: effect 3s linear;
+}
+
+@keyframes effect {
+  0% {
+      color: white;
+  }
+
+  100% {
+      color: black;
+  }
+}
+
+svg {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button:hover {
+  background-color: red;
+  transition: .2s ease-in-out 0s;
+  transform: scale(1.25);
 }

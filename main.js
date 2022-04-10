@@ -1,6 +1,7 @@
 //buttons
 var rmButton = document.querySelector(".receive-message");
 
+var clearBtn = document.querySelector(".clear-button");
 
 //mantra image
 var mantraImg = document.querySelector(".mantra-bell")
@@ -8,7 +9,9 @@ var mantraImg = document.querySelector(".mantra-bell")
 //text to print
 var text = document.querySelector(".text")
 
+var messageBox = document.querySelector(".message-box")
 
+var loadingBox = document.querySelector(".loading-box")
 
 // objet that stores arrays
 
@@ -17,14 +20,10 @@ var messages = {
   mantras: mantras,
 };
 
-
-
 //event listener
-rmButton.addEventListener("click", fixingStuff)
-text.addEventListener("click", function() {
-  returnPage();
-  reloadPage();
-})
+rmButton.addEventListener("click", fixingStuff);
+
+clearBtn.addEventListener("click", returnPage);
 
 // functions
 function getRandomIndex(array) {
@@ -32,18 +31,10 @@ function getRandomIndex(array) {
 };
 
 function findRandomMessage(selected) {
-  // var selected = document.querySelector('input[type="radio"]:checked')
   var randomIndex = getRandomIndex(messages[selected.value])
   text.innerHTML = messages[selected.value][randomIndex]
   revealMessage();
 };
-
-// need conditional in findRandomMessage
-//OR new function that is a conditional
-
-//guard clause:
-// 1)  what's going on
-// 2) example below:
 
 function fixingStuff() {
   var selected = document.querySelector('input[type="radio"]:checked')
@@ -51,18 +42,20 @@ function fixingStuff() {
   findRandomMessage(selected)
 }
 
-
-
 function revealMessage() {
   mantraImg.classList.add("hidden")
-  text.classList.remove("hidden")
+  loadingBox.classList.remove("hidden")
+  messageBox.classList.add("hidden")
+  setTimeout(() => {
+    console.log('inside timeout')
+    loadingBox.classList.add("hidden")
+    messageBox.classList.remove("hidden")
+  }, 3000);
 };
 
 function returnPage() {
+  var selected = document.querySelector('input[type="radio"]:checked')
+  selected.checked = false
   mantraImg.classList.remove("hidden")
-  text.classList.add("hidden")
-}
-
-function reloadPage() {
-  window.location.reload()
+  messageBox.classList.add("hidden")
 }
