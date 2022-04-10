@@ -1,15 +1,15 @@
 //buttons
-var rmButton = document.querySelector(".receive-message");
-var clearBtn = document.querySelector(".clear-button");
+var rmButton = document.querySelector("#receiveMessage");
+var clearBtn = document.querySelector("#clearButton");
 //mantra image
-var mantraImg = document.querySelector(".mantra-bell");
+var mantraImg = document.querySelector("#mantraBell");
 //text to print
-var text = document.querySelector(".text")
-var messageBox = document.querySelector(".message-box");
+var text = document.querySelector("#textMessage")
+var messageBox = document.querySelector("#messageBox");
 //Loading Container
-var loadingBox = document.querySelector(".loading-box");
+var loadingBox = document.querySelector("#loadingBox");
 //Body to change background
-var body = document.querySelector(".body-blue-to-yellow-bg");
+var body = document.querySelector("#body");
 // objet that stores arrays
 var messages = {
   affirmations: affirmations,
@@ -32,16 +32,19 @@ function findRandomMessage(selected) {
 
 function fixingStuff() {
   var selected = document.querySelector('input[type="radio"]:checked')
-  if(!selected) alert("Please Select Affirmation Or Mantra!")
-  findRandomMessage(selected)
-  changeBackgroundColor(selected);
+  if (!selected) {
+    alert("Please Select Affirmation Or Mantra!")
+  } else {
+    findRandomMessage(selected)
+    changeBackgroundColor(selected);
+  }
 };
 
 function revealMessage() {
   mantraImg.classList.add("hidden")
   loadingBox.classList.remove("hidden")
   messageBox.classList.add("hidden")
-  setTimeout(() => {  
+  setTimeout(() => {
     loadingBox.classList.add("hidden")
     messageBox.classList.remove("hidden")
   }, 3000);
