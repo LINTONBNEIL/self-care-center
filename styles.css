@@ -1,26 +1,20 @@
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
-
+/* root  */
 :root {
-  --primary: #134d71;
-  --secondary: #78a7c6;
-  --third: #f7e4bf;
+  --blue: #134d71;
+  --lightBlue: #78a7c6;
+  --yellow: #f7e4bf;
+  --green: #34e89e;
+  --lightGreen: #0f3443;
+  --navyBlue: #4158D0;
+  --purple: #C850C0;
+  --orangeCreame: #FFCC70;
   --light: #ffffff;
   --dark: #000000;
-  --gradient: var(--primary), var(secondary), var(--third);
   --font-family: 'Quicksand', sans-serif;
+
 }
 
-* {
-  border: 10px, solid black;
-}
-
+/* body */
 body {
   font-family: var(--font-family);
   display: flex;
@@ -29,14 +23,26 @@ body {
   justify-content: space-evenly;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(var(--primary), var(--secondary), var(--third));
 }
 
+.body-blue-to-yellow-bg {
+  background: linear-gradient(var(--blue), var(--lightBlue), var(--yellow));
+}
+
+.body-pacific-dream-bg {
+  background: linear-gradient(var(--green), var(--lightGreen));
+}
+
+.body-sunset-bg {
+  background-image: linear-gradient(var(--navyBlue), var(--purple), var(--orangeCreame));
+
+}
 
 h1 {
   color: var(--light)
 }
 
+/* main */
 main {
   display: flex;
   flex-direction: column;
@@ -66,26 +72,18 @@ form {
   list-style-type: none;
 }
 
-div {
-
-}
-
-input {
-}
-
 label {
   font-style: italic;
 }
 
-.receive-message {
+button {
   color: white;
-  background-color: var(--primary);
+  background-color: var(--blue);
   height: 5vh;
   width: 13vw;
   -webkit-border-radius: 10px;
-  /* border: none; */
 }
-
+/* footer */
 footer {
   background: white;
   height: 30vh;
@@ -106,7 +104,6 @@ footer {
   background: none;
 }
 
-
 img {
   height: 50%;
   width: 50%;
@@ -116,6 +113,41 @@ img {
   display: none;
 }
 
+p {
+  animation: effect 3s linear;
+}
+
+@keyframes effect {
+  0% {
+      color: white;
+  }
+
+  100% {
+      color: black;
+  }
+}
+
+svg {
+  animation: spin 1s linear infinite;
+  opacity: 70%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button:hover {
+  background-color: var(--lightBlue);
+  transition: .2s ease-in-out 0s;
+  transform: scale(1.25);
+}
+
+/* media break points */
 @media (min-width: 750px) {
   .box-container {
     width: 60vw;
