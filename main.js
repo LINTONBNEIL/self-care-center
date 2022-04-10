@@ -4,7 +4,7 @@ var clearBtn = document.querySelector("#clearButton");
 //mantra image
 var mantraImg = document.querySelector("#mantraBell");
 //text to print
-var text = document.querySelector("#textMessage")
+var text = document.querySelector("#textMessage");
 var messageBox = document.querySelector("#messageBox");
 //Loading Container
 var loadingBox = document.querySelector("#loadingBox");
@@ -25,52 +25,52 @@ function getRandomIndex(array) {
 };
 
 function findRandomMessage(selected) {
-  var randomIndex = getRandomIndex(messages[selected.value])
-  text.innerHTML = messages[selected.value][randomIndex]
+  var randomIndex = getRandomIndex(messages[selected.value]);
+  text.innerHTML = messages[selected.value][randomIndex];
   revealMessage();
 };
 
 function fixingStuff() {
-  var selected = document.querySelector('input[type="radio"]:checked')
+  var selected = document.querySelector('input[type="radio"]:checked');
   if (!selected) {
-    alert("Please Select Affirmation Or Mantra!")
+    alert("Please Select Affirmation Or Mantra!");
   } else {
-    findRandomMessage(selected)
+    findRandomMessage(selected);
     changeBackgroundColor(selected);
   }
 };
 
 function revealMessage() {
-  mantraImg.classList.add("hidden")
-  loadingBox.classList.remove("hidden")
-  messageBox.classList.add("hidden")
+  mantraImg.classList.add("hidden");
+  loadingBox.classList.remove("hidden");
+  messageBox.classList.add("hidden");
   rmButton.disabled = true;
   setTimeout(() => {
-    loadingBox.classList.add("hidden")
-    messageBox.classList.remove("hidden")
+    loadingBox.classList.add("hidden");
+    messageBox.classList.remove("hidden");
     rmButton.disabled = false;
   }, 3000);
 };
 
 function returnPage() {
-  var selected = document.querySelector('input[type="radio"]:checked')
-  selected.checked = false
-  mantraImg.classList.remove("hidden")
-  messageBox.classList.add("hidden")
+  var selected = document.querySelector('input[type="radio"]:checked');
+  selected.checked = false;
+  mantraImg.classList.remove("hidden");
+  messageBox.classList.add("hidden");
 };
 
 function changeBackgroundColor(selection) {
-  selection.value === 'affirmations' ? showPacificDreamBg() : showSunsetBg()
+  selection.value === 'affirmations' ? showPacificDreamBg() : showSunsetBg();
 };
 
 function showPacificDreamBg() {
-  body.classList.remove("body-blue-to-yellow-bg")
-  body.classList.remove("body-sunset-bg")
-  body.classList.add("body-pacific-dream-bg")
+  body.classList.remove("body-blue-to-yellow-bg");
+  body.classList.remove("body-sunset-bg");
+  body.classList.add("body-pacific-dream-bg");
 };
 
 function showSunsetBg() {
-  body.classList.remove("body-blue-to-yellow-bg")
-  body.classList.remove("body-pink-to-white-bg")
-  body.classList.add("body-sunset-bg")
+  body.classList.remove("body-blue-to-yellow-bg");
+  body.classList.remove("body-pink-to-white-bg");
+  body.classList.add("body-sunset-bg");
 };
