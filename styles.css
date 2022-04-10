@@ -19,9 +19,21 @@ body {
   justify-content: space-evenly;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(var(--primary), var(--secondary), var(--third));
+  /* background: linear-gradient(var(--primary), var(--secondary), var(--third)); */
 }
 
+.body-blue-to-yellow-bg {
+    background: linear-gradient(var(--primary), var(--secondary), var(--third));
+}
+
+.body-pacific-dream-bg {
+  background: linear-gradient(#34e89e, #0f3443)
+}
+
+.body-sunset-bg {
+background-image: linear-gradient(#4158D0, #C850C0, #FFCC70);
+
+}
 
 h1 {
   color: var(--light)
@@ -143,6 +155,7 @@ p {
 
 svg {
   animation: spin 1s linear infinite;
+  opacity: 70%;
 }
 
 @keyframes spin {

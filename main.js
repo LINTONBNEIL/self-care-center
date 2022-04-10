@@ -13,6 +13,7 @@ var messageBox = document.querySelector(".message-box")
 
 var loadingBox = document.querySelector(".loading-box")
 
+var body = document.querySelector(".body-blue-to-yellow-bg")
 // objet that stores arrays
 
 var messages = {
@@ -40,6 +41,7 @@ function fixingStuff() {
   var selected = document.querySelector('input[type="radio"]:checked')
   if(!selected) alert("Please Select Affirmation Or Mantra!")
   findRandomMessage(selected)
+  changeBackgroundColor(selected);
 }
 
 function revealMessage() {
@@ -58,4 +60,20 @@ function returnPage() {
   selected.checked = false
   mantraImg.classList.remove("hidden")
   messageBox.classList.add("hidden")
+}
+
+function changeBackgroundColor(selection) {
+  selection.value === 'affirmations' ? showPacificDreamBg() : showSunsetBg()
+}
+
+function showPacificDreamBg() {
+  body.classList.remove("body-blue-to-yellow-bg")
+  body.classList.remove("body-sunset-bg")
+  body.classList.add("body-pacific-dream-bg")
+}
+
+function showSunsetBg() {
+  body.classList.remove("body-blue-to-yellow-bg")
+  body.classList.remove("body-pink-to-white-bg")
+  body.classList.add("body-sunset-bg")
 }
