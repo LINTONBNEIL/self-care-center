@@ -1,13 +1,17 @@
-
-
 /* root  */
 :root {
-  --primary: #134d71;
-  --secondary: #78a7c6;
-  --third: #f7e4bf;
+  --blue: #134d71;
+  --lightBlue: #78a7c6;
+  --yellow: #f7e4bf;
+  --green: #34e89e;
+  --lightGreen: #0f3443;
+  --navyBlue: #4158D0;
+  --purple: #C850C0;
+  --orangeCreame: #FFCC70;
   --light: #ffffff;
   --dark: #000000;
   --font-family: 'Quicksand', sans-serif;
+
 }
 
 /* body */
@@ -19,19 +23,18 @@ body {
   justify-content: space-evenly;
   width: 100vw;
   height: 100vh;
-  /* background: linear-gradient(var(--primary), var(--secondary), var(--third)); */
 }
 
 .body-blue-to-yellow-bg {
-    background: linear-gradient(var(--primary), var(--secondary), var(--third));
+  background: linear-gradient(var(--blue), var(--lightBlue), var(--yellow));
 }
 
 .body-pacific-dream-bg {
-  background: linear-gradient(#34e89e, #0f3443)
+  background: linear-gradient(var(--green), var(--lightGreen));
 }
 
 .body-sunset-bg {
-background-image: linear-gradient(#4158D0, #C850C0, #FFCC70);
+  background-image: linear-gradient(var(--navyBlue), var(--purple), var(--orangeCreame));
 
 }
 
@@ -75,7 +78,7 @@ label {
 
 button {
   color: white;
-  background-color: var(--primary);
+  background-color: var(--blue);
   height: 5vh;
   width: 13vw;
   -webkit-border-radius: 10px;
@@ -110,7 +113,6 @@ img {
   display: none;
 }
 
-/* media sizing */
 @media (min-width: 750px) {
   .box-container {
     width: 60vw;
@@ -138,7 +140,7 @@ img {
     width: 13vw;
   }
 }
-
+/* media break points */
 p {
   animation: effect 3s linear;
 }
@@ -168,7 +170,7 @@ svg {
 }
 
 button:hover {
-  background-color: var(--secondary);
+  background-color: var(--lightBlue);
   transition: .2s ease-in-out 0s;
   transform: scale(1.25);
 }

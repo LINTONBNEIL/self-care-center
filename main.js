@@ -42,7 +42,6 @@ function revealMessage() {
   loadingBox.classList.remove("hidden")
   messageBox.classList.add("hidden")
   setTimeout(() => {
-    console.log('inside timeout')
     loadingBox.classList.add("hidden")
     messageBox.classList.remove("hidden")
   }, 3000);
