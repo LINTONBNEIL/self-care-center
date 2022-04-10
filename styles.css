@@ -38,14 +38,11 @@ h1 {
 }
 
 main {
-
-}
-
-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
+
 
 .title {
   color: white;
@@ -54,7 +51,7 @@ header {
 .box-container {
   background: white;
   height: 20vh;
-  width: 37vw;
+  width: 80vw;
   -webkit-border-radius: 12px;
    display: flex;
   flex-direction: column;
@@ -109,37 +106,6 @@ footer {
   background: none;
 }
 
-.text:before, .text:after{
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 5px;
-  top: 50%;
-  background: var(--secondary);
-}
-
-.text:before {
-  left: -2.5px;
-}
-
-.text:after {
-  right: 2.5px;
-  background: var(--secondary);
-  transition: width 0.8 cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.text:hover:before{
-  background: var(--secondary);
- width: 100%;
- transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.text:hover:after {
-  background: transparent;
-  width: 100%;
-  transition: 0s;
-}
-
 
 img {
   height: 50%;
@@ -148,4 +114,32 @@ img {
 
 .hidden {
   display: none;
+}
+
+@media (min-width: 750px) {
+  .box-container {
+    width: 60vw;
+  }
+
+  footer {
+    width: 70vw;
+  }
+
+  .receive-message {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .box-container {
+    width: 37vw;
+  }
+
+  footer {
+    width: 60vw;
+  }
+
+  .receive-message {
+    width: 13vw;
+  }
 }
