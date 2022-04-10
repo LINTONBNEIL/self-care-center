@@ -41,13 +41,14 @@ function findRandomMessage(selected) {
 // need conditional in findRandomMessage
 //OR new function that is a conditional
 
+//guard clause:
+// 1)  what's going on
+// 2) example below:
+
 function fixingStuff() {
   var selected = document.querySelector('input[type="radio"]:checked')
-  if (selected) {
-    findRandomMessage(selected)
-  } else {
-    alert("Please Select Affirmation Or Mantra!");
-  }
+  if(!selected) alert("Please Select Affirmation Or Mantra!")
+  findRandomMessage(selected)
 }
 
 
