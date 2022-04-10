@@ -44,9 +44,11 @@ function revealMessage() {
   mantraImg.classList.add("hidden")
   loadingBox.classList.remove("hidden")
   messageBox.classList.add("hidden")
+  rmButton.disabled = true;
   setTimeout(() => {
     loadingBox.classList.add("hidden")
     messageBox.classList.remove("hidden")
+    rmButton.disabled = false;
   }, 3000);
 };
 
