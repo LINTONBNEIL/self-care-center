@@ -113,34 +113,6 @@ img {
   display: none;
 }
 
-@media (min-width: 750px) {
-  .box-container {
-    width: 60vw;
-  }
-
-  footer {
-    width: 70vw;
-  }
-
-  .receive-message {
-    width: 40vw;
-  }
-}
-
-@media (min-width: 1000px) {
-  .box-container {
-    width: 37vw;
-  }
-
-  footer {
-    width: 60vw;
-  }
-
-  .receive-message {
-    width: 13vw;
-  }
-}
-/* media break points */
 p {
   animation: effect 3s linear;
 }
@@ -173,4 +145,33 @@ button:hover {
   background-color: var(--lightBlue);
   transition: .2s ease-in-out 0s;
   transform: scale(1.25);
+}
+
+/* media break points */
+@media (min-width: 750px) {
+  .box-container {
+    width: 60vw;
+  }
+
+  footer {
+    width: 70vw;
+  }
+
+  .receive-message {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .box-container {
+    width: 37vw;
+  }
+
+  footer {
+    width: 60vw;
+  }
+
+  .receive-message {
+    width: 13vw;
+  }
 }

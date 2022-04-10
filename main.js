@@ -41,7 +41,7 @@ function revealMessage() {
   mantraImg.classList.add("hidden")
   loadingBox.classList.remove("hidden")
   messageBox.classList.add("hidden")
-  setTimeout(() => {
+  setTimeout(() => {  
     loadingBox.classList.add("hidden")
     messageBox.classList.remove("hidden")
   }, 3000);
